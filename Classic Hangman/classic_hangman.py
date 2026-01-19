@@ -68,7 +68,7 @@ guessed_letters = []
 wrong_guesses = 0
 max_attempts = 6
 
-print("🎯 Welcome to Hangman Game!")
+print(" Welcome to Hangman Game!")
 
 while wrong_guesses < max_attempts:
     print(hangman_stages[wrong_guesses])
@@ -91,20 +91,20 @@ while wrong_guesses < max_attempts:
     guess = input("Enter a letter: ").lower()
 
     if len(guess) != 1 or not guess.isalpha():
-        print("❌ Enter only one alphabet.")
+        print(" Enter only one alphabet.")
         continue
 
     if guess in guessed_letters:
-        print("⚠️ Letter already guessed.")
+        print(" Letter already guessed.")
         continue
 
     guessed_letters.append(guess)
 
     if guess not in word:
         wrong_guesses += 1
-        print("❌ Wrong guess!")
+        print(" Wrong guess!")
 
 else:
     print(hangman_stages[wrong_guesses])
-    print("\n💀 Game Over!")
+    print("\n Game Over!")
     print("The word was:", word)
