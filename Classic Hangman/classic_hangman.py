@@ -84,7 +84,7 @@ while wrong_guesses < max_attempts:
     print("Guessed letters:", guessed_letters)
 
     if "_" not in display_word:
-        print("\n🎉 Congratulations! You won!")
+        print("\n Congratulations! You won!")
         print("The word was:", word)
         break
 
